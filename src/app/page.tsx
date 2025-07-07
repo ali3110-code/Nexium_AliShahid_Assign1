@@ -91,7 +91,7 @@ export default function Home() {
                   <span
                     key={topic}
                     className="bg-[#fefce8] border border-[#fcd34d] text-[#a16207] px-2 py-1 rounded text-xs capitalize"
-                    onClick={() => setTopic(topic)} // Optional: prefill input
+                    onClick={() => setTopic(topic)}
                   >
                     {topic}
                   </span>
