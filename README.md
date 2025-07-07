@@ -31,8 +31,6 @@ The app is deployed on [Vercel](https://vercel.com/).
 2. Click **Generate**.
 3. View 3 quotes in a carousel format.
 
----
-
 ## Author
 
 **Ali Shahid**  
