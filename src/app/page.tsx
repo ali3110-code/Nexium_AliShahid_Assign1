@@ -65,20 +65,23 @@ export default function Home() {
         value={Topic}
         onChange={(e) => setTopic(e.target.value)}
         className="w-full max-w-xl border border-[#d6bb57] bg-[#fefce8] text-[#a16207] shadow-sm focus:border-[#a16207] focus:ring-2 focus:ring-[#fde68a]"
-        placeholder="Start typing a topic or pick one from suggestions"
+        placeholder="Type a topic or pick one from suggestions"
       />
 
       <div className="gap-4 flex justify-end items-center w-full max-w-xl">
         <Tooltip>
           <TooltipTrigger asChild>
-            <span className="text-[#a16207] cursor-pointer text-sm px-2 py-1 rounded border border-[#d6bb57] bg-[#fefce8] hover:bg-[#fde68a] transition">
+            <button
+              type="button"
+              className="text-[#a16207] cursor-pointer text-sm px-2 py-1 rounded border border-[#d6bb57] bg-[#fefce8] hover:bg-[#fde68a] transition"
+            >
               Need Ideas?
-            </span>
+            </button>
           </TooltipTrigger>
 
           <TooltipContent
             side="top"
-            className="max-w-xs text-sm text-left leading-snug"
+            className="max-w-xs text-sm text-left leading-snug bg-[#fff7ed] border border-[#fcd34d] p-4 rounded-md shadow-lg"
           >
             <p className="mb-2 font-medium text-[#a16207]">Try topics like:</p>
             <div className="flex flex-wrap gap-2 max-h-40 overflow-y-auto pr-1">
@@ -88,6 +91,7 @@ export default function Home() {
                   <span
                     key={topic}
                     className="bg-[#fefce8] border border-[#fcd34d] text-[#a16207] px-2 py-1 rounded text-xs capitalize"
+                    onClick={() => setTopic(topic)} // Optional: prefill input
                   >
                     {topic}
                   </span>
@@ -95,6 +99,7 @@ export default function Home() {
             </div>
           </TooltipContent>
         </Tooltip>
+
         <Button
           onClick={generate}
           className="bg-[#ca8a04] hover:bg-[#a16207] text-white shadow-md w-40"
