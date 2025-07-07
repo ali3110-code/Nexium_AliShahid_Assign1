@@ -21,7 +21,7 @@ This is a simple Quote Generator built using **Next.js**, **TypeScript**, and **
 ## Deployment
 
 The app is deployed on [Vercel](https://vercel.com/).  
-🔗 [Live Demo](https://quote-generator-gamma-sable.vercel.app/)
+🔗 [Live Demo](https://quote-generator-nexium.vercel.app/)
 
 ## Folder Structure
 

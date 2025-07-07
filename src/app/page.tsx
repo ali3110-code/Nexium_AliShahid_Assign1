@@ -65,7 +65,7 @@ export default function Home() {
         value={Topic}
         onChange={(e) => setTopic(e.target.value)}
         className="w-full max-w-xl border border-[#d6bb57] bg-[#fefce8] text-[#a16207] shadow-sm focus:border-[#a16207] focus:ring-2 focus:ring-[#fde68a]"
-        placeholder="Type topic or select below"
+        placeholder="Start typing a topic or pick one from suggestions"
       />
 
       <div className="gap-4 flex justify-end items-center w-full max-w-xl">
