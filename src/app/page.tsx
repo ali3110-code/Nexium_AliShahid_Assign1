@@ -1,10 +1,10 @@
 "use client";
 
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import {
   Carousel,
   CarouselContent,
@@ -69,36 +69,36 @@ export default function Home() {
       />
 
       <div className="gap-4 flex justify-end items-center w-full max-w-xl">
-        <Tooltip>
-          <TooltipTrigger asChild>
+        <Popover>
+          <PopoverTrigger asChild>
             <button
               type="button"
-              className="text-[#a16207] cursor-pointer text-sm px-2 py-1 rounded border border-[#d6bb57] bg-[#fefce8] hover:bg-[#fde68a] transition"
+              className="text-[#a16207] cursor-pointer text-sm px-3 py-1 rounded border border-[#d6bb57] bg-[#fefce8] hover:bg-[#fde68a] transition shadow"
             >
-              Need Ideas?
+              Need Ideas &#x1F4A1;
             </button>
-          </TooltipTrigger>
+          </PopoverTrigger>
 
-          <TooltipContent
+          <PopoverContent
             side="top"
-            className="max-w-xs text-sm text-left leading-snug bg-[#fff7ed] border border-[#fcd34d] p-4 rounded-md shadow-lg"
+            className="w-72 max-h-64 overflow-y-auto shadow-lg bg-[#fff7ed] border border-[#fcd34d] rounded-lg p-4 text-sm text-[#78350f]"
           >
-            <p className="mb-2 font-medium text-[#a16207]">Try topics like:</p>
-            <div className="flex flex-wrap gap-2 max-h-40 overflow-y-auto pr-1">
+            <p className="font-semibold mb-3 text-[#a16207]">Popular Topics</p>
+            <div className="flex flex-wrap gap-2">
               {Object.keys(quotesData.topics)
                 .slice(0, 25)
                 .map((topic) => (
                   <span
                     key={topic}
-                    className="bg-[#fefce8] border border-[#fcd34d] text-[#a16207] px-2 py-1 rounded text-xs capitalize"
                     onClick={() => setTopic(topic)}
+                    className="cursor-pointer bg-[#fefce8] hover:bg-[#fde68a] border border-[#fcd34d] text-[#a16207] px-3 py-1 rounded-full text-xs capitalize transition"
                   >
                     {topic}
                   </span>
                 ))}
             </div>
-          </TooltipContent>
-        </Tooltip>
+          </PopoverContent>
+        </Popover>
 
         <Button
           onClick={generate}
